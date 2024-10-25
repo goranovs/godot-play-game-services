@@ -15,6 +15,7 @@ If you want to download the plugin for a previous version of Godot 4.x, use the 
 
 ## Table of contents
 - [Forewords](#forewords)
+- [Contributing](#contributing)
 - [Install the plugin](#install-the-plugin)
 - [The Demo project](#the-demo-project)
 - [Building the plugin yourself](#building-the-plugin-yourself)
@@ -34,6 +35,11 @@ If you want to download the plugin for a previous version of Godot 4.x, use the 
 The whole project started as a collaboration with [Rafa Laguna](https://github.com/rafalagoon), and this plugin is the updated version of the [old one](https://github.com/Iakobs/godot-google-play-game-services-android-plugin/tree/main) for Godot 3.5+.
 
 With Godot 4.2+, the way android plugins work [has changed](https://docs.godotengine.org/en/stable/tutorials/platform/android/android_plugin.html), so I had to update this plugin to match the new requirements. Now there's only one editor plugin (this one), instead of having two separate plugins like before, one android plugin and one godot plugin.
+
+Thanks also to the [Godot Foundation](https://godot.foundation/) for allowing me to host this plugin in their organization. [I'm](https://github.com/Iakobs) still the [maintainer](MAINTAINERS.md) of the plugin, but it was moved to this repository on October 2024.
+
+## Contributing
+If you want to contribute, please read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## Install the plugin
 Using the plugin requires downloading the assets in the [releases section](https://github.com/Iakobs/godot-play-game-services/releases) of the repository and following the steps described there to copy the plugin folder to your Godot project.
@@ -88,7 +94,7 @@ An additional configuration has to be made in order to connect with Google Game 
 ## Documentation
 
 ### Kotlin Code
-You can find the technical documentation of the kotlin code in the [GitHub Pages](https://iakobs.github.io/godot-play-game-services/) of this repository. It's generated with [Dokka](https://kotlinlang.org/docs/dokka-introduction.html) from the [KDocs](https://kotlinlang.org/docs/kotlin-doc.html) documentation on the source code.
+You can find the technical documentation of the kotlin code in the [GitHub Pages](https://godot.jacobibanez.com/) of this repository. It's generated with [Dokka](https://kotlinlang.org/docs/dokka-introduction.html) from the [KDocs](https://kotlinlang.org/docs/kotlin-doc.html) documentation on the source code.
 
 ### GDScript Code
 The GDScript code is documented in the code itself, so you can access it via the Godot Editor. I'm working to publish it in a static webpage too.
