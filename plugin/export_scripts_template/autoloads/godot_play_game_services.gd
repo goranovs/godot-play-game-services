@@ -25,12 +25,12 @@ func _ready() -> void:
 	
 	if not android_plugin:
 		if Engine.has_singleton(plugin_name):
-			print("Plugin found!")
+			print("GodotPlayGameServices plugin initialized successfully.")
 			
 			android_plugin = Engine.get_singleton(plugin_name)
 			android_plugin.initialize()
 		else:
-			printerr("No plugin found!")
+			printerr("Google Play Games Services are only supported on Android. The current platform does not support it.")
 	
 	if android_plugin:
 		android_plugin.imageStored.connect(func(file_path: String):
