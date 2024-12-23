@@ -13,7 +13,7 @@ extends Node
 ## [param file_path]: The path to the stored file.
 signal image_stored(file_path: String)
 
-## Main entry point to the android plugin. With this object, you can call the 
+## Main entry point to the android plugin. With this object, you can call the
 ## kotlin methods directly.
 var android_plugin: Object
 
@@ -22,16 +22,16 @@ var json_marshaller := JsonMarshaller.new()
 
 func _ready() -> void:
 	var plugin_name := "GodotPlayGameServices"
-	
+
 	if not android_plugin:
 		if Engine.has_singleton(plugin_name):
 			print("GodotPlayGameServices plugin initialized successfully.")
-			
+
 			android_plugin = Engine.get_singleton(plugin_name)
 			android_plugin.initialize()
 		else:
-			printerr("Google Play Games Services are only supported on Android. The current platform does not support it.")
-	
+			printerr("GodotPlayGameServices not found. Google Play Games Services will not work.")
+
 	if android_plugin:
 		android_plugin.imageStored.connect(func(file_path: String):
 			image_stored.emit(file_path)
